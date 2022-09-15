@@ -4,7 +4,7 @@
 <html lang="pl-PL">
 <head>
 	<!-- TITLE -->
-	<title> Zadanie 1 </title>
+	<title> Strona Zaliczeniowa </title>
 	
 	<!-- META -->
 	<meta name="Description" content="Zadanie 1" />
@@ -12,30 +12,80 @@
 	<meta charset="UTF-8" />
 
 	<script language="JavaScript">
-		function WinOpen_polit_zadanie1() {
-			window.open("Zadanie-1/index.html", "okienko11", "toolbar=no,directories=no,menubar=no,height=270,width=800,top=200,left=500");
+		function WinOpen_polit(src) {
+			window.open(src, "okienko14", "toolbar=no,directories=no,menubar=no,height=600,width=800,top=200,left=500");
 		}
 
-		function WinOpen_polit_zadanie2() {
-			window.open("Zadanie-2/index.html", "okienko12", "toolbar=no,directories=no,menubar=no,height=270,width=800,top=200,left=500");
-		}
+		function show_alert() {alert("Uwaga!");}
 
-		function WinOpen_polit_zadanie1_kod() {
-			window.open("Zadanie-1/zadanie1_kod.html", "okienko13", "toolbar=no,directories=no,menubar=no,height=600,width=800,top=200,left=500");
-		}
+		function show_confirm() {
+				var r = confirm("Naciśnij klawisz");
+				if (r == true) { document.write("Nacisnąłeś OK!"); }
+				else { document.write("Nacisnąłeś Cancel!"); }
+			} 
 
-		function WinOpen_polit_zadanie2_kod() {
-			window.open("Zadanie-2/zadanie2_kod.html", "okienko14", "toolbar=no,directories=no,menubar=no,height=600,width=800,top=200,left=500");
+		function show_prompt() {
+				var name = prompt("Napisz imię", "Imię Nazwisko");
+				if (name != null && name != "") {
+					document.write("Witaj " + name + "! jak się masz?");
+				}
+			} 
+		
+		function zadanie7() {
+			var liczba1 = prompt("liczba1=", "");
+			var liczba2 = prompt("liczba2=", "");
+			var suma;
+			var a = parseFloat(liczba1);
+			var b = parseFloat(liczba2);
+			suma = a + b;
+			document.write("suma=" + a + " + " + b + " = " + suma + "<br>")
 		}
+		
+		/* Wczytać dwa numer dni z miesiąca stycznia D1_kow, D2_kow (trzy litery nazwiska ucznia) i obliczyć ile sekund
+		minęło między tymi dniami dla północy obu dni. Program nie sprawdza poprawności wczytania danych, czyli
+		D1>=D2 1<=D1,D2<=31 D1,D2 należy do naturalnych. Kolor wyświetlania zielony wielkość znaków 30+numer_dnia urodzenia. */
+
+		function zadanie8() {
+				var D1_pol = prompt("Dzien 1: ", "");
+				var D2_pol = prompt("Dzien 2: ", "");
+				var result = ((D2_pol - D1_pol) * 24 * 60 * 60);
+				document.write("<h1 style=\"color: green; font - size: 31px\"> " + result + " sekund</h1>");
+			}
+
+		/* Wczytać dwa numer dni z miesiąca stycznia D1_kow, D2_kow (trzy litery nazwiska ucznia) oraz dwie godziny
+		(G1_kow, G2_kow) obliczyć ile sekund minęło między tymi dniami i godzinami. Program nie sprawdza 
+		poprawności wczytania danych czyli D1>=D2 1<=D1,D2<=31 1<=G1,G2<=24 D1,D2,G1,G2 należy do 
+		naturalnych. Kolor wyświetlania zielony wielkość znaków 30+numer_dnia urodzenia. */
+
+		function zadanie9() {
+				var D1_pol = prompt("Dzien 1: ", "");
+				var D2_pol = prompt("Dzien 2: ", "");
+				var G1_pol = prompt("Godzina 1: ", "");
+				var G2_pol = prompt("Godzina 2: ", "");
+				var result = (((D2_pol - D1_pol) * 24 * 60 * 60) - ((G2_pol - G1_pol) * 60 * 60));
+				document.write("<h1 style=\"color: green; font - size: 31px\"> " + result + " sekund</h1>");
+			}
+
 	</script>
 </head>
 <body>
 	<h1 style="font-size: 2cm;"> Polit </h1>
 	<form>
-		<input type="button" name="przycisk" value="Zadanie1" onclick="WinOpen_polit_zadanie1(' ')">
-		<input type="button" name="przycisk" value="Zadanie1 - kod" onclick="WinOpen_polit_zadanie1_kod(' ')">
-		<input type="button" name="przycisk" value="Zadanie2" onclick="WinOpen_polit_zadanie2(' ')">
-		<input type="button" name="przycisk" value="Zadanie2 - kod" onclick="WinOpen_polit_zadanie2_kod(' ')">
+		<input type="button" name="przycisk" value="Zadanie1" onclick="WinOpen_polit('Zadanie-1/index.html')">
+		<input type="button" name="przycisk" value="Zadanie1 - kod" onclick="WinOpen_polit('Zadanie-1/zadanie1_kod.html')">
+		<input type="button" name="przycisk" value="Zadanie2" onclick="WinOpen_polit('Zadanie-2/index.html')">
+		<input type="button" name="przycisk" value="Zadanie2 - kod" onclick="WinOpen_polit('Zadanie-2/zadanie2_kod.html')">
+		
+		<input type="button" name="przycisk" value="Zadanie3" onclick="WinOpen_polit('Zadanie-3/index.html')" />
+		<input type="button" name="przycisk" value="Zadanie4" onclick="show_alert()" />
+		<input type="button" name="przycisk" value="Zadanie5" onclick="show_confirm()" />
+		<input type="button" name="przycisk" value="Zadanie6" onclick="show_prompt()" />
+		<input type="button" name="przycisk" value="Zadanie7" onclick="zadanie7()" />
+		<input type="button" name="przycisk" value="Zadanie8" onclick="zadanie8()" />
+		<input type="button" name="przycisk" value="Zadanie8 - kod" onclick="WinOpen_polit('Zadanie-8/zadanie8_kod.html')" />
+		<input type="button" name="przycisk" value="Zadanie9" onclick="zadanie9()" />
+		<input type="button" name="przycisk" value="Zadanie9 - kod" onclick="WinOpen_polit('Zadanie-9/zadanie1_kod.html')" />
+
 	</form>
 </body>
 </html>

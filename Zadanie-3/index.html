@@ -1,0 +1,64 @@
+<!-- Kamil Polit, 02.09.2022 -->
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<!-- TITLE -->
+	<title> Zadanie 2 </title>
+	
+	<!-- META -->
+	<meta name="Description" content="Zadanie 1" />
+	<meta name="Author" content="Kamil Polit" />
+	<meta charset="UTF-8" />
+
+    <script language="JavaScript">
+        function WinOpen_polit() {
+            window.open("zadanie2.html", "okienko", "toolbar=no,directories=no,menubar=no,height=270,width=800,top=200,left=500");
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Rodzaje okienek: <br />
+        Okienko alert – wyświetlająca okienko dialogowe z informacją i przyciskiem OK,<br />
+        Okienko prompt – generująca okno, w którym użytkownik może wpisać wartość, zwracaną<br />
+        następnie do programu.<br />
+    </p>
+    <p>
+        Okienko confirm służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm).<br />
+        Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad:<br />
+    </p>
+    <p>
+        1. Nazwa zmiennej musi się zaczynać od litery, znaku "$" lub "_", może zawierać tylko litery (bez
+        polskich znaków), cyfry oraz "$" i "_".<br />
+        
+        Poprawne nazwy zmiennych: zmienna1, $wynik, _rozmiar, wynik1, Rekord, $_gracz<br />
+        Błędne nazwy zmiennych: 1zmienna, wynik gry, wysokosc&szerokosc, wynik.rekord, &gracz,<br />
+        wysokość, imie+nazwisko.<br />
+        2. Wielkość liter ma znaczenie.<br />
+        Rekord i rekord to dwie różne zmienne! Jest to bardzo częsta przyczyna błędów w kodzie<br />
+        początkujących programistów.<br />
+        3. Należy nie używać słów kluczowych JavaScript jako nazw zmiennych.<br />
+    </p>
+    <p>
+        Typy zmiennych w Javascript<br />
+        W JavaScript nie ma możliwości definiowania różnych typów zmiennych tak jak w C++, typy<br />
+        zmiennych są definiowane w trakcie ich przypisywania.<br />
+        Podstawowe zmienne liczbowe w JavaScript to:<br />
+        Number - Typ liczbowy<br />
+        zmienna całkowite  <br />
+        zmiennoprzecinkowe  <br />
+        String - Typ tekstowy  <br />
+        Boolea - Typ logiczny  <br />
+        Null - Pusta zawartość  <br />
+        Undefined - Typ niezidentyfikowany  <br />
+        Object - Obiekt  <br />
+        Konwersji zmiennych.  <br />
+        Wczytanie zmiennej z użyciem prompt wykonywane jest jako ciąg znaków dlatego konieczna jest  <br />
+        konwersji z ciągu znaków na wartości liczbowe aby wykonywac obliczenia.  <br />
+        parseFloat(zmienna) - konwersja zmiennej do typu float  <br />
+        parseInt(zmienna) - konwersja zmiennej do typu int (liczbowego)  <br />
+        toString(zmienna) - konwersja zmiennej do typu łańcuchowego  <br />
+    </p>
+</body>
+</html>
