@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<!-- TITLE -->
+	<title> Kod </title>
+	<meta charset="UTF-8" />
+</head>
+<body> <textarea rows="35" cols="100">
+
+function zadanie13() {
+    var a_pol = prompt("Podaj A: ", "");
+    var b_pol = prompt("Podaj B: ", "");
+
+    var a_pol = parseFloat(a_pol);
+    var b_pol = parseFloat(b_pol);
+
+    /* (A + B)^3= A^3 + 3*((A)^2)*(B) + 3*(A)*((B)^2) + B^3 = 1 + 6 + 12 + 8 = 27 */
+    var equation1 = a_pol * a_pol * a_pol
+    var equation2 = 3 * (a_pol * a_pol) * b_pol
+    var equation3 = 3 * a_pol * (b_pol * b_pol)
+    var equation4 = b_pol * b_pol * b_pol
+
+    document.write("<h1 style=\"color: blue; font - size: 31px\"> (" + 
+        a_pol + " + " + b_pol + ") ^ 3 = " + a_pol + " ^ 3 + 3 * ((" + a_pol + ") ^ 2) * (" + b_pol + ") + 3 * (" + a_pol + ") * ((" + b_pol + ") ^ 2) + " + b_pol + " ^ 3 = " +
+        equation1 + " + " + equation2 + " + " + equation3 + " + " + equation4 + " = " + (equation1 + equation2 + equation3 + equation4));
+}
+
+
+</textarea>
+<form> <input type="button" name="exit" value="Powrót" onclick="window.close()"> </form>
+</body>
+</html>

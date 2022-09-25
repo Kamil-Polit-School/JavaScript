@@ -25,11 +25,11 @@
 			} 
 
 		function show_prompt() {
-				var name = prompt("Napisz imię", "Imię Nazwisko");
-				if (name != null && name != "") {
-					document.write("Witaj " + name + "! jak się masz?");
-				}
-			} 
+			var name = prompt("Napisz imię", "Imię Nazwisko");
+			if (name != null && name != "") {
+				document.write("Witaj " + name + "! jak się masz?");
+			}
+		}
 		
 		function zadanie7() {
 			var liczba1 = prompt("liczba1=", "");
@@ -64,7 +64,56 @@
 				var G2_pol = prompt("Godzina 2: ", "");
 				var result = (((D2_pol - D1_pol) * 24 * 60 * 60) - ((G2_pol - G1_pol) * 60 * 60));
 				document.write("<h1 style=\"color: green; font - size: 31px\"> " + result + " sekund</h1>");
-			}
+			} 
+		
+		function zadanie10() {
+			var m_pol = prompt("Podaj M: ", "");
+			var m1_pol = parseFloat(m_pol);
+			var result = (m1_pol + 1);
+			var result1 = (m1_pol * (m1_pol + 1));
+
+			document.write("<h1 style=\"color: green; font - size: 31px\"> 1 / " + m1_pol + " = 1 / " + result + " + 1 / " + result1 + " </h1>");
+		}
+
+		function zadanie11() {
+			var m_pol = prompt("Podaj M: ", "");
+			var m1_pol = parseFloat(m_pol);
+			/* Rozkład pierwszego */
+			var result = (m1_pol + 1);
+			var result1 = (m1_pol * (m1_pol + 1));
+
+			/* Rozkład drugiego */
+			var result2 = (result1 + 1);
+			var result3 = (result1 * (result1 + 1));
+
+			document.write("<h1 style=\"color: green; font - size: 31px\"> 1 / " + m1_pol + " = 1 / " + result + " + 1 / " + result2 + " + 1 / " + result3 + " </h1>");
+		}
+
+		function zadanie12() {
+			var m_pol = prompt("Podaj M: ", "");
+			var m1_pol = parseFloat(m_pol);
+			var result = m1_pol * 2
+
+			document.write("<h1 style=\"color: green; font - size: 31px\"> 1 / " + m1_pol + " = 1 / " + result + " + 1 / " + result + " </h1>");
+		}
+
+		function zadanie13() {
+			var a_pol = prompt("Podaj A: ", "");
+			var b_pol = prompt("Podaj B: ", "");
+
+			var a_pol = parseFloat(a_pol);
+			var b_pol = parseFloat(b_pol);
+
+			/* (A + B)^3= A^3 + 3*((A)^2)*(B) + 3*(A)*((B)^2) + B^3 = 1 + 6 + 12 + 8 = 27 */
+			var equation1 = a_pol * a_pol * a_pol
+			var equation2 = 3 * (a_pol * a_pol) * b_pol
+			var equation3 = 3 * a_pol * (b_pol * b_pol)
+			var equation4 = b_pol * b_pol * b_pol
+
+			document.write("<h1 style=\"color: blue; font - size: 31px\"> (" + 
+				a_pol + " + " + b_pol + ") ^ 3 = " + a_pol + " ^ 3 + 3 * ((" + a_pol + ") ^ 2) * (" + b_pol + ") + 3 * (" + a_pol + ") * ((" + b_pol + ") ^ 2) + " + b_pol + " ^ 3 = " +
+				equation1 + " + " + equation2 + " + " + equation3 + " + " + equation4 + " = " + (equation1 + equation2 + equation3 + equation4));
+		}
 
 	</script>
 </head>
@@ -84,8 +133,16 @@
 		<input type="button" name="przycisk" value="Zadanie8" onclick="zadanie8()" />
 		<input type="button" name="przycisk" value="Zadanie8 - kod" onclick="WinOpen_polit('Zadanie-8/zadanie8_kod.html')" />
 		<input type="button" name="przycisk" value="Zadanie9" onclick="zadanie9()" />
-		<input type="button" name="przycisk" value="Zadanie9 - kod" onclick="WinOpen_polit('Zadanie-9/zadanie1_kod.html')" />
-
+		<input type="button" name="przycisk" value="Zadanie9 - kod" onclick="WinOpen_polit('Zadanie-9/zadanie9_kod.html')" />
+		
+		<input type="button" name="przycisk" value="Zadanie10" onclick="zadanie10()" />
+		<input type="button" name="przycisk" value="Zadanie10 - kod" onclick="WinOpen_polit('Zadanie-10/zadanie10_kod.html')" />
+		<input type="button" name="przycisk" value="Zadanie11" onclick="zadanie11()" />
+		<input type="button" name="przycisk" value="Zadanie11 - kod" onclick="WinOpen_polit('Zadanie-11/zadanie11_kod.html')" />
+		<input type="button" name="przycisk" value="Zadanie12" onclick="zadanie12()" />
+		<input type="button" name="przycisk" value="Zadanie12 - kod" onclick="WinOpen_polit('Zadanie-12/zadanie12_kod.html')" />
+		<input type="button" name="przycisk" value="Zadanie13" onclick="zadanie13()" />
+		<input type="button" name="przycisk" value="Zadanie13 - kod" onclick="WinOpen_polit('Zadanie-13/zadanie13_kod.html')" />
 	</form>
 </body>
 </html>
