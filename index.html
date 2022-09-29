@@ -115,6 +115,51 @@
 				equation1 + " + " + equation2 + " + " + equation3 + " + " + equation4 + " = " + (equation1 + equation2 + equation3 + equation4));
 		}
 
+		function zadanie14a() {
+			var bok_B_pol = prompt("Podaj Bok B: ", "");
+			var bok_C_pol = prompt("Podaj Bok C: ", "");
+			var bok_B_pol = parseFloat(bok_B_pol);
+			var bok_C_pol = parseFloat(bok_C_pol);
+
+			var bok_A_pol = Math.sqrt((bok_C_pol * bok_C_pol) - (bok_B_pol * bok_B_pol));
+
+			document.write("<h1 style=\"color: green; font - size: 31px\"> SIN a: " + (bok_A_pol / bok_C_pol).toFixed(2) + " </h1>");
+			document.write("<h1 style=\"color: green; font - size: 31px\"> COS a: " + (bok_B_pol / bok_C_pol).toFixed(2) + " </h1>");
+			document.write("<h1 style=\"color: green; font - size: 31px\"> TX a: " + (bok_A_pol / bok_B_pol).toFixed(2) + " </h1>");
+			document.write("<h1 style=\"color: green; font - size: 31px\"> CTQ a: " + (bok_B_pol / bok_A_pol).toFixed(2) + " </h1>");
+		}
+
+		function zadanie17() {
+			var a = parseFloat(prompt("a=", ""));
+			var b = parseFloat(prompt("b=", ""));
+
+			function suma_pol(a, b) {
+				return a + b;
+			}
+
+			function odejmowanie_pol(a, b) {
+				return a - b;
+			}
+
+			function mnozenie_pol(a, b) {
+				return a * b;
+			}
+
+			function od_kwadratu_pol(a, b) {
+				return (a * a) + " " + b * b;
+			}
+
+			function reszta_z_dzielenia_a_przez_b_pol(a, b) {
+				return a % b;
+			}
+
+			document.write("suma=" + suma_pol(a, b) + "<br>");
+			document.write("odejmowanie=" + odejmowanie_pol(a, b) + "<br>");
+			document.write("mnozenie=" + mnozenie_pol(a, b) + "<br>");
+			document.write("od kwadratu=" + od_kwadratu_pol(a, b) + "<br>");
+			document.write("resdzta z dzielenia=" + reszta_z_dzielenia_a_przez_b_pol(a, b) + "<br>");
+		}
+
 	</script>
 </head>
 <body>
@@ -143,6 +188,11 @@
 		<input type="button" name="przycisk" value="Zadanie12 - kod" onclick="WinOpen_polit('Zadanie-12/zadanie12_kod.html')" />
 		<input type="button" name="przycisk" value="Zadanie13" onclick="zadanie13()" />
 		<input type="button" name="przycisk" value="Zadanie13 - kod" onclick="WinOpen_polit('Zadanie-13/zadanie13_kod.html')" />
+
+		<input type="button" name="przycisk" value="Zadanie14a" onclick="zadanie14a()" />
+		<input type="button" name="przycisk" value="Zadanie14a - kod" onclick="WinOpen_polit('Zadanie-14a/zadanie14a_kod.html')" />
+		<input type="button" name="przycisk" value="Zadanie17" onclick="zadanie17()" />
+		<input type="button" name="przycisk" value="Zadanie17 - kod" onclick="WinOpen_polit('Zadanie-17/zadanie17_kod.html')" />
 	</form>
 </body>
 </html>
